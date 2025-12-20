@@ -32,22 +32,22 @@ namespace Concepts.AsyncAndParallel
         // To run this file: dotnet run --property:StartupObject=Concepts.AsyncAndParallel.TaskParallelLibrary
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- Parallel Programming Demo ---");
+            Console.WriteLine("--- Parallel Programming Demo ---"); // Output: --- Parallel Programming Demo ---
 
             int totalItems = 10;
 
             // 1. Sequential Loop
-            Console.WriteLine("\n1. Sequential Loop (One Thread):");
+            Console.WriteLine("\n1. Sequential Loop (One Thread):"); // Output: \n1. Sequential Loop (One Thread):
             Stopwatch sw = Stopwatch.StartNew();
             for (int i = 0; i < totalItems; i++)
             {
                 DoHeavyWork(i);
             }
             sw.Stop();
-            Console.WriteLine($"Sequential took: {sw.ElapsedMilliseconds} ms");
+            Console.WriteLine($"Sequential took: {sw.ElapsedMilliseconds} ms"); // Output: Sequential took: [Time] ms
 
             // 2. Parallel Loop
-            Console.WriteLine("\n2. Parallel Loop (Multiple Threads):");
+            Console.WriteLine("\n2. Parallel Loop (Multiple Threads):"); // Output: \n2. Parallel Loop (Multiple Threads):
             sw.Restart();
             // The TPL automatically divides the work among available CPU cores.
             Parallel.For(0, totalItems, i =>
@@ -55,7 +55,7 @@ namespace Concepts.AsyncAndParallel
                 DoHeavyWork(i);
             });
             sw.Stop();
-            Console.WriteLine($"Parallel took: {sw.ElapsedMilliseconds} ms");
+            Console.WriteLine($"Parallel took: {sw.ElapsedMilliseconds} ms"); // Output: Parallel took: [Time] ms
         }
 
         static void DoHeavyWork(int id)

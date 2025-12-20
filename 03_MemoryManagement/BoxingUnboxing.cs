@@ -42,21 +42,21 @@ namespace Concepts
         // To run this file: dotnet run --property:StartupObject=Concepts.BoxingUnboxing
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- Boxing and Unboxing Demo ---");
+            Console.WriteLine("--- Boxing and Unboxing Demo ---"); // Output: --- Boxing and Unboxing Demo ---
 
             // 1. Value Type
             int num = 123; // Lives on Stack
-            Console.WriteLine($"Value Type: {num}");
+            Console.WriteLine($"Value Type: {num}"); // Output: Value Type: 123
 
             // 2. Boxing
             // Implicit conversion to object
             object boxedNum = num; // Lives on Heap
-            Console.WriteLine($"Boxed (Object): {boxedNum}");
+            Console.WriteLine($"Boxed (Object): {boxedNum}"); // Output: Boxed (Object): 123
 
             // 3. Unboxing
             // Explicit conversion back to int
             int unboxedNum = (int)boxedNum;
-            Console.WriteLine($"Unboxed: {unboxedNum}");
+            Console.WriteLine($"Unboxed: {unboxedNum}"); // Output: Unboxed: 123
 
             // 4. The Danger (Invalid Unboxing)
             try
@@ -67,8 +67,8 @@ namespace Concepts
             }
             catch (InvalidCastException e)
             {
-                Console.WriteLine($"\nError Unboxing: {e.Message}");
-                Console.WriteLine("Story: You tried to take a Toaster out of a box that contained a Car!");
+                Console.WriteLine($"\nError Unboxing: {e.Message}"); // Output: \nError Unboxing: Specified cast is not valid.
+                Console.WriteLine("Story: You tried to take a Toaster out of a box that contained a Car!"); // Output: Story: You tried to take a Toaster out of a box that contained a Car!
             }
         }
     }

@@ -43,38 +43,38 @@ namespace Concepts.CoreFundamentals
             // 1. Basic Tuple
             Console.WriteLine("\n1. Basic Tuple:");
             var values = GetMinMax(new int[] { 1, 5, 3, 9, 2 });
-            Console.WriteLine($"Min: {values.Min}, Max: {values.Max}");
+            Console.WriteLine($"Min: {values.Min}, Max: {values.Max}"); // Output: Min: 1, Max: 9
 
             // 2. Deconstruction (Unpacking)
             Console.WriteLine("\n2. Deconstruction:");
             // We unpack the tuple directly into two variables: 'min' and 'max'
             var (min, max) = GetMinMax(new int[] { 10, 50, 30 });
-            Console.WriteLine($"Unpacked -> Min: {min}, Max: {max}");
+            Console.WriteLine($"Unpacked -> Min: {min}, Max: {max}"); // Output: Unpacked -> Min: 10, Max: 50
 
             // 3. Discards (Ignoring values)
             Console.WriteLine("\n3. Discards:");
             // We only care about the Max value. We discard the Min using '_'.
             var (_, onlyMax) = GetMinMax(new int[] { 100, 500, 300 });
-            Console.WriteLine($"I only care about Max: {onlyMax}");
+            Console.WriteLine($"I only care about Max: {onlyMax}"); // Output: I only care about Max: 500
 
             // 4. Deconstructing Objects
             Console.WriteLine("\n4. Deconstructing Objects:");
             var p = new PersonDeconstruct("John", "Doe", 30);
             // The PersonDeconstruct class has a Deconstruct method, so we can treat it like a tuple!
             var (first, last, age) = p; 
-            Console.WriteLine($"{first} {last} is {age} years old.");
+            Console.WriteLine($"{first} {last} is {age} years old."); // Output: John Doe is 30 years old.
 
             // 5. Using 'out' parameters (The Old Way vs New Way)
             Console.WriteLine("\n5. Out Parameters:");
             if (int.TryParse("123", out int result)) // Inline out declaration
             {
-                Console.WriteLine($"Parsed number: {result}");
+                Console.WriteLine($"Parsed number: {result}"); // Output: Parsed number: 123
             }
             
             // Using discard with out
             if (int.TryParse("999", out _)) 
             {
-                Console.WriteLine("It is a valid number, but I don't care what it is.");
+                Console.WriteLine("It is a valid number, but I don't care what it is."); // Output: It is a valid number, but I don't care what it is.
             }
         }
 

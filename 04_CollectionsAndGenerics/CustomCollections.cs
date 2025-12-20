@@ -49,18 +49,18 @@ namespace Concepts.CollectionsAndGenerics
         // To run this file: dotnet run --property:StartupObject=Concepts.CollectionsAndGenerics.CustomCollections
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- Custom Collections Demo ---");
+            Console.WriteLine("--- Custom Collections Demo ---"); // Output: --- Custom Collections Demo ---
 
             Playlist myJams = new Playlist();
             myJams.Add("Bohemian Rhapsody");
             myJams.Add("Stairway to Heaven");
             myJams.Add("Hotel California");
 
-            Console.WriteLine("Playing Playlist:");
+            Console.WriteLine("Playing Playlist:"); // Output: Playing Playlist:
             // Because Playlist implements IEnumerable, we can use foreach!
             foreach (var song in myJams)
             {
-                Console.WriteLine($"🎵 Now Playing: {song}");
+                Console.WriteLine($"🎵 Now Playing: {song}"); // Output: 🎵 Now Playing: Bohemian Rhapsody
             }
         }
     }

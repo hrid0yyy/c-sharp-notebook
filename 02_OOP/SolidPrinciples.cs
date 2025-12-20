@@ -38,11 +38,11 @@ namespace Concepts
     // S: Single Responsibility
     class ReportGenerator
     {
-        public void Generate() { Console.WriteLine("Generating Report..."); }
+        public void Generate() { Console.WriteLine("Generating Report..."); } // Output: Generating Report...
     }
     class ReportSaver // Separate class for saving
     {
-        public void SaveToFile() { Console.WriteLine("Saving to File..."); }
+        public void SaveToFile() { Console.WriteLine("Saving to File..."); } // Output: Saving to File...
     }
 
     // O: Open/Closed
@@ -52,11 +52,11 @@ namespace Concepts
     }
     class Circle : Shape
     {
-        public override void Draw() { Console.WriteLine("Drawing Circle"); }
+        public override void Draw() { Console.WriteLine("Drawing Circle"); } // Output: Drawing Circle
     }
     class Square : Shape // We added Square without changing Shape or Circle!
     {
-        public override void Draw() { Console.WriteLine("Drawing Square"); }
+        public override void Draw() { Console.WriteLine("Drawing Square"); } // Output: Drawing Square
     }
 
     class SolidPrinciples
@@ -64,7 +64,7 @@ namespace Concepts
         // To run this file: dotnet run --property:StartupObject=Concepts.SolidPrinciples
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- SOLID Principles Demo ---");
+            Console.WriteLine("--- SOLID Principles Demo ---"); // Output: --- SOLID Principles Demo ---
             
             // O: Open/Closed Usage
             Shape s1 = new Circle();
@@ -72,7 +72,7 @@ namespace Concepts
             s1.Draw();
             s2.Draw();
 
-            Console.WriteLine("See comments in code for full stories!");
+            Console.WriteLine("See comments in code for full stories!"); // Output: See comments in code for full stories!
         }
     }
 }

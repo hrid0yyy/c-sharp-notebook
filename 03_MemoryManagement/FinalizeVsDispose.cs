@@ -44,20 +44,20 @@ namespace Concepts
         // Constructor
         public ResourceHolder()
         {
-            Console.WriteLine("ResourceHolder: Acquired resources (Book borrowed).");
+            Console.WriteLine("ResourceHolder: Acquired resources (Book borrowed)."); // Output: ResourceHolder: Acquired resources (Book borrowed).
         }
 
         // Dispose Method (The Responsible Way)
         public void Dispose()
         {
-            Console.WriteLine("ResourceHolder: Dispose called. Releasing resources immediately (Book returned).");
+            Console.WriteLine("ResourceHolder: Dispose called. Releasing resources immediately (Book returned)."); // Output: ResourceHolder: Dispose called. Releasing resources immediately (Book returned).
             GC.SuppressFinalize(this); // Tell the Janitor he doesn't need to visit.
         }
 
         // Destructor / Finalizer (The Safety Net)
         ~ResourceHolder()
         {
-            Console.WriteLine("ResourceHolder: Finalizer called by GC. Releasing resources late (Janitor took the book).");
+            Console.WriteLine("ResourceHolder: Finalizer called by GC. Releasing resources late (Janitor took the book)."); // Output: ResourceHolder: Finalizer called by GC. Releasing resources late (Janitor took the book).
         }
     }
 
@@ -66,24 +66,24 @@ namespace Concepts
         // To run this file: dotnet run --property:StartupObject=Concepts.FinalizeVsDispose
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- Finalize vs Dispose Demo ---");
+            Console.WriteLine("--- Finalize vs Dispose Demo ---"); // Output: --- Finalize vs Dispose Demo ---
 
             // 1. Using Dispose (Explicit)
-            Console.WriteLine("\nScenario 1: The Responsible Reader");
+            Console.WriteLine("\nScenario 1: The Responsible Reader"); // Output: \nScenario 1: The Responsible Reader
             using (ResourceHolder responsible = new ResourceHolder())
             {
-                Console.WriteLine("Using the resource...");
+                Console.WriteLine("Using the resource..."); // Output: Using the resource...
             } // Dispose is called automatically here at the end of the block.
-            Console.WriteLine("End of Scenario 1.");
+            Console.WriteLine("End of Scenario 1."); // Output: End of Scenario 1.
 
             // 2. Relying on Finalize (Implicit)
-            Console.WriteLine("\nScenario 2: The Forgetful Reader");
+            Console.WriteLine("\nScenario 2: The Forgetful Reader"); // Output: \nScenario 2: The Forgetful Reader
             CreateForgetfulObject();
             
-            Console.WriteLine("Object created and abandoned. Forcing Garbage Collection...");
+            Console.WriteLine("Object created and abandoned. Forcing Garbage Collection..."); // Output: Object created and abandoned. Forcing Garbage Collection...
             GC.Collect(); // Force the Janitor to come
             GC.WaitForPendingFinalizers(); // Wait for him to finish
-            Console.WriteLine("End of Scenario 2.");
+            Console.WriteLine("End of Scenario 2."); // Output: End of Scenario 2.
         }
 
         static void CreateForgetfulObject()

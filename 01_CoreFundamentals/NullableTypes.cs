@@ -46,14 +46,14 @@ namespace Concepts.CoreFundamentals
             int? age = null; // The box is empty
             int? height = 180; // The box has 180
 
-            Console.WriteLine($"Age is: {(age.HasValue ? age.ToString() : "Unknown")}");
-            Console.WriteLine($"Height is: {height}");
+            Console.WriteLine($"Age is: {(age.HasValue ? age.ToString() : "Unknown")}"); // Output: Age is: Unknown
+            Console.WriteLine($"Height is: {height}");                                   // Output: Height is: 180
 
             // 2. The Null Coalescing Operator (??)
             // Story: "If the box is empty, use this backup coin."
             // If age is null, use 0.
             int safeAge = age ?? 0; 
-            Console.WriteLine($"Safe Age: {safeAge}");
+            Console.WriteLine($"Safe Age: {safeAge}"); // Output: Safe Age: 0
 
             // 3. The Null Conditional Operator (?.)
             // Story: "Only ring the doorbell IF the house exists."
@@ -61,7 +61,7 @@ namespace Concepts.CoreFundamentals
             // int length = message.Length; // CRASH! NullReferenceException
             int? length = message?.Length; // Returns null if message is null. No crash.
             
-            Console.WriteLine($"Message Length: {length}");
+            Console.WriteLine($"Message Length: {length}"); // Output: Message Length: 
 
             // 4. Danger Zone
             try
@@ -78,7 +78,7 @@ namespace Concepts.CoreFundamentals
             }
             catch (InvalidOperationException)
             {
-                Console.WriteLine("Error: You tried to take a value from an empty box!");
+                Console.WriteLine("Error: You tried to take a value from an empty box!"); // Output: Error: You tried to take a value from an empty box!
             }
         }
     }

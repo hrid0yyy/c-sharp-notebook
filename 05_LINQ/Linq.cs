@@ -34,7 +34,7 @@ namespace Concepts
         // To run this file: dotnet run --property:StartupObject=Concepts.Linq
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- LINQ Demo ---");
+            Console.WriteLine("--- LINQ Demo ---"); // Output: --- LINQ Demo ---
 
             List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
@@ -42,26 +42,26 @@ namespace Concepts
             // The query is NOT executed here.
             var query = numbers.Where(n => 
             {
-                Console.WriteLine($"Checking number: {n}");
+                Console.WriteLine($"Checking number: {n}"); // Output: Checking number: 1
                 return n % 2 == 0;
             });
 
-            Console.WriteLine("Query defined. Nothing happened yet.");
+            Console.WriteLine("Query defined. Nothing happened yet."); // Output: Query defined. Nothing happened yet.
 
             // 2. Execute Query
-            Console.WriteLine("Executing query now (foreach)...");
+            Console.WriteLine("Executing query now (foreach)..."); // Output: Executing query now (foreach)...
             foreach (var n in query)
             {
-                Console.WriteLine($"Found even: {n}");
+                Console.WriteLine($"Found even: {n}"); // Output: Found even: 2
             }
 
             // 3. Method Syntax vs Query Syntax
-            Console.WriteLine("\nQuery Syntax:");
+            Console.WriteLine("\nQuery Syntax:"); // Output: \nQuery Syntax:
             var querySyntax = from n in numbers
                               where n > 5
                               select n;
             
-            foreach(var n in querySyntax) Console.Write(n + " ");
+            foreach(var n in querySyntax) Console.Write(n + " "); // Output: 6 7 8 9 10 
             Console.WriteLine();
         }
     }

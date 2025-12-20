@@ -51,7 +51,7 @@ namespace Concepts.CoreFundamentals
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"  [CATCH] Stunt cancelled: {ex.Message}");
+                Console.WriteLine($"  [CATCH] Stunt cancelled: {ex.Message}"); // Output: [CATCH] Stunt cancelled: Equipment is unsafe!
             }
         }
 
@@ -62,18 +62,18 @@ namespace Concepts.CoreFundamentals
                 // The Stunt
                 Console.WriteLine($"  [TRY] Dividing {a} by {b}...");
                 int result = a / b;
-                Console.WriteLine($"  [TRY] Success! Result is {result}");
+                Console.WriteLine($"  [TRY] Success! Result is {result}"); // Output (Scenario 1): [TRY] Success! Result is 5
             }
             catch (DivideByZeroException ex)
             {
                 // The Safety Net
-                Console.WriteLine($"  [CATCH] Caught a fall! You cannot divide by zero.");
+                Console.WriteLine($"  [CATCH] Caught a fall! You cannot divide by zero."); // Output (Scenario 2): [CATCH] Caught a fall! You cannot divide by zero.
                 Console.WriteLine($"  Error Details: {ex.Message}");
             }
             finally
             {
                 // The Bow
-                Console.WriteLine("  [FINALLY] Cleaning up calculation resources.");
+                Console.WriteLine("  [FINALLY] Cleaning up calculation resources."); // Output: [FINALLY] Cleaning up calculation resources.
             }
         }
 

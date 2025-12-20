@@ -47,7 +47,7 @@ namespace Concepts.CoreFundamentals
             // BETTER:
             // int result = GetResult();
 
-            Console.WriteLine($"1. var usage: {message}");
+            Console.WriteLine($"1. var usage: {message}"); // Output: 1. var usage: Hello World
 
             // 2. String Interpolation
             string firstName = "John";
@@ -58,7 +58,7 @@ namespace Concepts.CoreFundamentals
             
             // GOOD
             string fullNameNew = $"{firstName} {lastName}";
-            Console.WriteLine($"2. String Interpolation: {fullNameNew}");
+            Console.WriteLine($"2. String Interpolation: {fullNameNew}"); // Output: 2. String Interpolation: John Doe
 
             // 3. Object Initializers
             // BAD
@@ -72,7 +72,7 @@ namespace Concepts.CoreFundamentals
                 FirstName = "Bob", 
                 LastName = "Jones" 
             };
-            Console.WriteLine($"3. Object Initializer: {p2.FirstName} {p2.LastName}");
+            Console.WriteLine($"3. Object Initializer: {p2.FirstName} {p2.LastName}"); // Output: 3. Object Initializer: Bob Jones
 
             // 4. Collection Expressions (C# 12+) & Initializers
             // OLD
@@ -85,7 +85,7 @@ namespace Concepts.CoreFundamentals
             
             // STANDARD (Collection Initializer)
             List<string> fruitsStandard = new List<string> { "Apple", "Banana" };
-            Console.WriteLine($"4. Collections: {string.Join(", ", fruitsStandard)}");
+            Console.WriteLine($"4. Collections: {string.Join(", ", fruitsStandard)}"); // Output: 4. Collections: Apple, Banana
 
             // 5. Using Statements (Resource Management)
             // OLD Way (Requires braces)

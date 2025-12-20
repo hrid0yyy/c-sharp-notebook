@@ -1,98 +1,3 @@
-# C# Concepts Notebook
-
-This project serves as an interactive notebook for learning advanced C# concepts. Each file is a self-contained lesson with a "Story Line" to explain the concept simply, followed by a technical explanation and a runnable code demo.
-
-## 📂 Project Structure
-
-The concepts are organized into 7 core categories, following the developer roadmap:
-
-### 🧱 1. Core C# Fundamentals (`Concepts.CoreFundamentals`)
-*   **`ControlFlow.cs`**: If, Switch, Loops (The Traffic Controller).
-*   **`DataTypes.cs`**: Value vs Reference Types (The Photocopy vs Shared Doc).
-*   **`NullableTypes.cs`**: Handling nulls safely (The Mystery Box).
-*   **`PatternMatching.cs`**: `is` checks, switch expressions (The Smart Security Guard).
-*   **`TuplesAndDeconstruction.cs`**: Returning multiple values (The Combo Meal).
-*   **`ExtensionMethods.cs`**: Adding methods to existing types (The Backpack Attachment).
-*   **`ExceptionHandling.cs`**: Try-Catch-Finally (The Trapeze Artist).
-*   **`CodingConventions.cs`**: Best practices for `var`, `using`, etc.
-*   **`NamingConventions.cs`**: PascalCase, camelCase rules.
-
-### 🧠 2. OOP (`Concepts.OOP`)
-*   **`InterfacesVsAbstract.cs`**: Contracts vs Blueprints (The Job Description).
-*   **`SolidPrinciples.cs`**: The 5 pillars of clean architecture (LEGO analogy).
-*   **`DesignPatterns.cs`**: Singleton, Factory, and Repository patterns.
-*   **`StaticConstructors.cs`**: One-time setup (The Blueprint Office).
-*   **`EarlyVsLateBinding.cs`**: Compile-time vs Runtime resolution.
-
-### 💾 3. Memory Management (`Concepts.MemoryManagement`)
-*   **`StackVsHeap.cs`**: Memory allocation (The Notebook vs Whiteboard).
-*   **`BoxingUnboxing.cs`**: Value types vs Reference types.
-*   **`FinalizeVsDispose.cs`**: Cleanup (The Librarian vs The Janitor).
-*   **`Records.cs`**: Immutable data types (The Photocopy).
-*   **`StringVsStringBuilder.cs`**: Immutable vs Mutable strings.
-
-### 📦 4. Collections & Generics (`Concepts.CollectionsAndGenerics`)
-*   **`ArraysVsCollections.cs`**: Fixed vs Dynamic storage.
-*   **`Generics.cs`**: Generic Classes & Methods (The Universal Factory).
-*   **`CustomCollections.cs`**: Implementing `IEnumerable` (The Playlist).
-
-### 🔍 5. LINQ (`Concepts.LINQ`)
-*   **`Linq.cs`**: Language Integrated Query (The Universal Translator).
-*   **`DeferredExecution.cs`**: Lazy evaluation (The Pizza Order).
-*   **`AnonymousTypes.cs`**: Temporary objects (The Temporary ID Badge).
-
-### 🔁 6. Delegates & Events (`Concepts.DelegatesAndEvents`)
-*   **`DelegatesAndEvents.cs`**: Event-driven programming (The Newspaper Subscription).
-*   **`FuncActionPredicate.cs`**: Standard delegates (The Pre-made Forms).
-*   **`LambdaExpressions.cs`**: Anonymous functions (The Sticky Note).
-
-### ⚡ 7. Async & Parallel (`Concepts.AsyncAndParallel`)
-*   **`AsyncMultithreading.cs`**: Async/Await (The Breakfast Chef).
-*   **`TaskParallelLibrary.cs`**: Parallel Loops (The Assembly Line).
-
----
-
-## ▶️ How to Run
-
-Since this is a single Console Application with multiple `Main` methods, you must specify which file (Class) you want to execute.
-
-### Using `dotnet run`
-
-Use the `--property:StartupObject` flag followed by the full namespace and class name.
-
-**Examples:**
-
-```powershell
-# 1. Core Fundamentals
-dotnet run --property:StartupObject=Concepts.CoreFundamentals.ControlFlow
-dotnet run --property:StartupObject=Concepts.CoreFundamentals.PatternMatching
-
-# 2. OOP
-dotnet run --property:StartupObject=Concepts.OOP.InterfacesVsAbstract
-
-# 3. Memory Management
-dotnet run --property:StartupObject=Concepts.MemoryManagement.StackVsHeap
-
-# 4. Collections
-dotnet run --property:StartupObject=Concepts.CollectionsAndGenerics.CustomCollections
-
-# 5. LINQ
-dotnet run --property:StartupObject=Concepts.LINQ.DeferredExecution
-
-# 6. Delegates
-dotnet run --property:StartupObject=Concepts.DelegatesAndEvents.FuncActionPredicate
-
-# 7. Async
-dotnet run --property:StartupObject=Concepts.AsyncAndParallel.TaskParallelLibrary
-```
-
-### 📝 Notes
-*   **Caching Issue**: If you switch between demos using the command line and see the output of the *previous* demo, run `dotnet clean` first.
-*   Each file contains a `Main` method.
-*   Read the comments in each file for the "Story Line" and detailed explanations.
-
----
-
 # 🚀 C# Core Concepts – Complete Developer Roadmap
 
 This repository serves as a **comprehensive learning and reference guide** for mastering **C# and .NET**.  
@@ -295,6 +200,99 @@ It covers **fundamental to advanced concepts** that every C# developer should kn
 7. EF Core  
 8. Design Patterns  
 9. Testing & Clean Architecture  
+
+---
+
+# 📂 Project Structure
+
+This project serves as an interactive notebook for learning advanced C# concepts. Each file is a self-contained lesson with a "Story Line" to explain the concept simply, followed by a technical explanation and a runnable code demo.
+
+The concepts are organized into 7 core categories, following the developer roadmap:
+
+### 🧱 1. Core C# Fundamentals (`Concepts.CoreFundamentals`)
+*   **`ControlFlow.cs`**: If, Switch, Loops (The Traffic Controller).
+*   **`DataTypes.cs`**: Value vs Reference Types (The Photocopy vs Shared Doc).
+*   **`NullableTypes.cs`**: Handling nulls safely (The Mystery Box).
+*   **`PatternMatching.cs`**: `is` checks, switch expressions (The Smart Security Guard).
+*   **`TuplesAndDeconstruction.cs`**: Returning multiple values (The Combo Meal).
+*   **`ExtensionMethods.cs`**: Adding methods to existing types (The Backpack Attachment).
+*   **`ExceptionHandling.cs`**: Try-Catch-Finally (The Trapeze Artist).
+*   **`CodingConventions.cs`**: Best practices for `var`, `using`, etc.
+*   **`NamingConventions.cs`**: PascalCase, camelCase rules.
+
+### 🧠 2. OOP (`Concepts.OOP`)
+*   **`InterfacesVsAbstract.cs`**: Contracts vs Blueprints (The Job Description).
+*   **`SolidPrinciples.cs`**: The 5 pillars of clean architecture (LEGO analogy).
+*   **`DesignPatterns.cs`**: Singleton, Factory, and Repository patterns.
+*   **`StaticConstructors.cs`**: One-time setup (The Blueprint Office).
+*   **`EarlyVsLateBinding.cs`**: Compile-time vs Runtime resolution.
+
+### 💾 3. Memory Management (`Concepts.MemoryManagement`)
+*   **`StackVsHeap.cs`**: Memory allocation (The Notebook vs Whiteboard).
+*   **`BoxingUnboxing.cs`**: Value types vs Reference types.
+*   **`FinalizeVsDispose.cs`**: Cleanup (The Librarian vs The Janitor).
+*   **`Records.cs`**: Immutable data types (The Photocopy).
+*   **`StringVsStringBuilder.cs`**: Immutable vs Mutable strings.
+
+### 📦 4. Collections & Generics (`Concepts.CollectionsAndGenerics`)
+*   **`ArraysVsCollections.cs`**: Fixed vs Dynamic storage.
+*   **`Generics.cs`**: Generic Classes & Methods (The Universal Factory).
+*   **`CustomCollections.cs`**: Implementing `IEnumerable` (The Playlist).
+
+### 🔍 5. LINQ (`Concepts.LINQ`)
+*   **`Linq.cs`**: Language Integrated Query (The Universal Translator).
+*   **`DeferredExecution.cs`**: Lazy evaluation (The Pizza Order).
+*   **`AnonymousTypes.cs`**: Temporary objects (The Temporary ID Badge).
+
+### 🔁 6. Delegates & Events (`Concepts.DelegatesAndEvents`)
+*   **`DelegatesAndEvents.cs`**: Event-driven programming (The Newspaper Subscription).
+*   **`FuncActionPredicate.cs`**: Standard delegates (The Pre-made Forms).
+*   **`LambdaExpressions.cs`**: Anonymous functions (The Sticky Note).
+
+### ⚡ 7. Async & Parallel (`Concepts.AsyncAndParallel`)
+*   **`AsyncMultithreading.cs`**: Async/Await (The Breakfast Chef).
+*   **`TaskParallelLibrary.cs`**: Parallel Loops (The Assembly Line).
+
+---
+
+## ▶️ How to Run
+
+Since this is a single Console Application with multiple `Main` methods, you must specify which file (Class) you want to execute.
+
+### Using `dotnet run`
+
+Use the `--property:StartupObject` flag followed by the full namespace and class name.
+
+**Examples:**
+
+```powershell
+# 1. Core Fundamentals
+dotnet run --property:StartupObject=Concepts.CoreFundamentals.ControlFlow
+dotnet run --property:StartupObject=Concepts.CoreFundamentals.PatternMatching
+
+# 2. OOP
+dotnet run --property:StartupObject=Concepts.OOP.InterfacesVsAbstract
+
+# 3. Memory Management
+dotnet run --property:StartupObject=Concepts.MemoryManagement.StackVsHeap
+
+# 4. Collections
+dotnet run --property:StartupObject=Concepts.CollectionsAndGenerics.CustomCollections
+
+# 5. LINQ
+dotnet run --property:StartupObject=Concepts.LINQ.DeferredExecution
+
+# 6. Delegates
+dotnet run --property:StartupObject=Concepts.DelegatesAndEvents.FuncActionPredicate
+
+# 7. Async
+dotnet run --property:StartupObject=Concepts.AsyncAndParallel.TaskParallelLibrary
+```
+
+### 📝 Notes
+*   **Caching Issue**: If you switch between demos using the command line and see the output of the *previous* demo, run `dotnet clean` first.
+*   Each file contains a `Main` method.
+*   Read the comments in each file for the "Story Line" and detailed explanations.
 
 ---
 

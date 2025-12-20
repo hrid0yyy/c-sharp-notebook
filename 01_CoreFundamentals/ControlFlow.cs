@@ -41,7 +41,7 @@ namespace Concepts.CoreFundamentals
             }
             else if (speed > 60)
             {
-                Console.WriteLine("  Good speed.");
+                Console.WriteLine("  Good speed."); // Output: Good speed.
             }
             else
             {
@@ -57,7 +57,7 @@ namespace Concepts.CoreFundamentals
                     Console.WriteLine("  Go!");
                     break;
                 case "Yellow":
-                    Console.WriteLine("  Prepare to stop.");
+                    Console.WriteLine("  Prepare to stop."); // Output: Prepare to stop.
                     break;
                 case "Red":
                     Console.WriteLine("  Stop!");
@@ -74,7 +74,7 @@ namespace Concepts.CoreFundamentals
             Console.Write("  For Loop (Count to 3): ");
             for (int i = 1; i <= 3; i++)
             {
-                Console.Write($"{i} ");
+                Console.Write($"{i} "); // Output: 1 2 3 
             }
             Console.WriteLine();
 
@@ -83,17 +83,17 @@ namespace Concepts.CoreFundamentals
             int fuel = 3;
             while (fuel > 0)
             {
-                Console.Write($"[Fuel {fuel}] ");
+                Console.Write($"[Fuel {fuel}] "); // Output: [Fuel 3] [Fuel 2] [Fuel 1] 
                 fuel--;
             }
-            Console.WriteLine("Empty!");
+            Console.WriteLine("Empty!"); // Output: Empty!
 
             // Do-While Loop (Run at least once)
             Console.Write("  Do-While (One lap): ");
             int laps = 0;
             do
             {
-                Console.Write("Lap finished. ");
+                Console.Write("Lap finished. "); // Output: Lap finished. 
                 laps++;
             } while (laps < 1);
             Console.WriteLine();

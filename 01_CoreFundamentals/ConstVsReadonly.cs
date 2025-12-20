@@ -66,14 +66,14 @@ namespace Concepts
         {
             Console.WriteLine("--- Const vs Readonly Demo ---");
 
-            Console.WriteLine($"Constant Pi: {ConstantsDemo.Pi}");
-            Console.WriteLine($"Static Readonly StartupTime: {ConstantsDemo.StartupTime}");
+            Console.WriteLine($"Constant Pi: {ConstantsDemo.Pi}"); // Output: Constant Pi: 3.14159
+            Console.WriteLine($"Static Readonly StartupTime: {ConstantsDemo.StartupTime}"); // Output: Static Readonly StartupTime: [Current Date Time]
 
             ConstantsDemo obj1 = new ConstantsDemo(100);
-            Console.WriteLine($"Object 1 InstanceId (Readonly): {obj1.InstanceId}");
+            Console.WriteLine($"Object 1 InstanceId (Readonly): {obj1.InstanceId}"); // Output: Object 1 InstanceId (Readonly): 100
 
             ConstantsDemo obj2 = new ConstantsDemo(200);
-            Console.WriteLine($"Object 2 InstanceId (Readonly): {obj2.InstanceId}");
+            Console.WriteLine($"Object 2 InstanceId (Readonly): {obj2.InstanceId}"); // Output: Object 2 InstanceId (Readonly): 200
 
             Console.WriteLine("\nNotice: 'InstanceId' is immutable for that object, but different objects have different values.");
         }

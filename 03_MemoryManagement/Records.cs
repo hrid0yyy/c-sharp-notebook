@@ -55,7 +55,7 @@ namespace Concepts.MemoryManagement
         // To run this file: dotnet run --property:StartupObject=Concepts.OOP.Records
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- Records Demo ---");
+            Console.WriteLine("--- Records Demo ---"); // Output: --- Records Demo ---
 
             // 1. Creation
             var r1 = new PersonRecord("Alice", 25);
@@ -65,24 +65,24 @@ namespace Concepts.MemoryManagement
             var c2 = new PersonClass("Alice", 25);
 
             // 2. Equality Check
-            Console.WriteLine("\n1. Equality:");
-            Console.WriteLine($"Record 1 == Record 2: {r1 == r2}"); // True! (Checks values)
-            Console.WriteLine($"Class 1 == Class 2:   {c1 == c2}"); // False! (Checks memory address)
+            Console.WriteLine("\n1. Equality:"); // Output: \n1. Equality:
+            Console.WriteLine($"Record 1 == Record 2: {r1 == r2}"); // Output: Record 1 == Record 2: True
+            Console.WriteLine($"Class 1 == Class 2:   {c1 == c2}"); // Output: Class 1 == Class 2:   False
 
             // 3. Immutability & "With" expression
-            Console.WriteLine("\n2. Mutation (The 'With' keyword):");
+            Console.WriteLine("\n2. Mutation (The 'With' keyword):"); // Output: \n2. Mutation (The 'With' keyword):
             // r1.Age = 26; // Error! Cannot change property.
 
             // Create a copy of r1, but change Age to 26.
             var r3 = r1 with { Age = 26 };
             
-            Console.WriteLine($"Original: {r1}"); // Built-in ToString()! Output: PersonRecord { Name = Alice, Age = 25 }
-            Console.WriteLine($"New Copy: {r3}"); // Output: PersonRecord { Name = Alice, Age = 26 }
+            Console.WriteLine($"Original: {r1}"); // Output: Original: PersonRecord { Name = Alice, Age = 25 }
+            Console.WriteLine($"New Copy: {r3}"); // Output: New Copy: PersonRecord { Name = Alice, Age = 26 }
 
             // 4. Deconstruction
-            Console.WriteLine("\n3. Deconstruction:");
+            Console.WriteLine("\n3. Deconstruction:"); // Output: \n3. Deconstruction:
             var (name, age) = r1;
-            Console.WriteLine($"Name: {name}, Age: {age}");
+            Console.WriteLine($"Name: {name}, Age: {age}"); // Output: Name: Alice, Age: 25
         }
     }
 }

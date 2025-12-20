@@ -47,12 +47,12 @@ namespace Concepts
         // To run this file: dotnet run --property:StartupObject=Concepts.StringVsStringBuilder
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- String vs StringBuilder Demo ---");
+            Console.WriteLine("--- String vs StringBuilder Demo ---"); // Output: --- String vs StringBuilder Demo ---
 
             int iterations = 10000; // Try increasing this to 50000 to see a huge difference
 
             // 1. Using String (The Slow Way)
-            Console.WriteLine($"Concatenating {iterations} times using String...");
+            Console.WriteLine($"Concatenating {iterations} times using String..."); // Output: Concatenating 10000 times using String...
             Stopwatch sw = Stopwatch.StartNew();
             string s = "";
             for (int i = 0; i < iterations; i++)
@@ -60,10 +60,10 @@ namespace Concepts
                 s += "a"; // Creates a new string object EVERY time!
             }
             sw.Stop();
-            Console.WriteLine($"String took: {sw.ElapsedMilliseconds} ms");
+            Console.WriteLine($"String took: {sw.ElapsedMilliseconds} ms"); // Output: String took: [Time] ms
 
             // 2. Using StringBuilder (The Fast Way)
-            Console.WriteLine($"Concatenating {iterations} times using StringBuilder...");
+            Console.WriteLine($"Concatenating {iterations} times using StringBuilder..."); // Output: Concatenating 10000 times using StringBuilder...
             sw.Restart();
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < iterations; i++)
@@ -72,9 +72,9 @@ namespace Concepts
             }
             string result = sb.ToString();
             sw.Stop();
-            Console.WriteLine($"StringBuilder took: {sw.ElapsedMilliseconds} ms");
+            Console.WriteLine($"StringBuilder took: {sw.ElapsedMilliseconds} ms"); // Output: StringBuilder took: [Time] ms
 
-            Console.WriteLine("\nConclusion: StringBuilder is MUCH faster for repeated modifications.");
+            Console.WriteLine("\nConclusion: StringBuilder is MUCH faster for repeated modifications."); // Output: \nConclusion: StringBuilder is MUCH faster for repeated modifications.
         }
     }
 }

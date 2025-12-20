@@ -39,8 +39,8 @@ namespace Concepts.DelegatesAndEvents
 
         public void PublishNews()
         {
-            Console.WriteLine("Publisher: Printing the newspaper...");
-            Console.WriteLine("Publisher: Sending out delivery boys...");
+            Console.WriteLine("Publisher: Printing the newspaper..."); // Output: Publisher: Printing the newspaper...
+            Console.WriteLine("Publisher: Sending out delivery boys..."); // Output: Publisher: Sending out delivery boys...
 
             // 3. Raise the Event (Tell the boys to go)
             if (OnNewsPublished != null)
@@ -62,7 +62,7 @@ namespace Concepts.DelegatesAndEvents
         // The Method (Your House)
         public void ReadNews(string message)
         {
-            Console.WriteLine($"Subscriber {Name} received: {message}");
+            Console.WriteLine($"Subscriber {Name} received: {message}"); // Output: Subscriber Alice received: BREAKING NEWS: C# is awesome!
         }
     }
 
@@ -71,7 +71,7 @@ namespace Concepts.DelegatesAndEvents
         // To run this file: dotnet run --property:StartupObject=Concepts.DelegatesAndEvents.DelegatesDemo
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- Delegates and Events Demo ---");
+            Console.WriteLine("--- Delegates and Events Demo ---"); // Output: --- Delegates and Events Demo ---
 
             Publisher nyt = new Publisher();
             Subscriber alice = new Subscriber("Alice");
@@ -85,7 +85,7 @@ namespace Concepts.DelegatesAndEvents
             // 5. Action!
             nyt.PublishNews();
 
-            Console.WriteLine("\nBob cancels subscription...");
+            Console.WriteLine("\nBob cancels subscription..."); // Output: \nBob cancels subscription...
             nyt.OnNewsPublished -= bob.ReadNews;
 
             nyt.PublishNews();

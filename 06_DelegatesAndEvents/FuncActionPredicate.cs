@@ -36,11 +36,11 @@ namespace Concepts.DelegatesAndEvents
         // To run this file: dotnet run --property:StartupObject=Concepts.DelegatesAndEvents.FuncActionPredicate
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- Func, Action, Predicate Demo ---");
+            Console.WriteLine("--- Func, Action, Predicate Demo ---"); // Output: --- Func, Action, Predicate Demo ---
 
             // 1. Action (Void)
             // Lambda: takes 'msg', prints it.
-            Action<string> greeter = (msg) => Console.WriteLine($"Action says: {msg}");
+            Action<string> greeter = (msg) => Console.WriteLine($"Action says: {msg}"); // Output: Action says: Hello World!
             greeter("Hello World!");
 
             // 2. Func (Returns Value)
@@ -48,18 +48,18 @@ namespace Concepts.DelegatesAndEvents
             // Func<int, int, int> -> Input, Input, Output
             Func<int, int, int> adder = (x, y) => x + y;
             int result = adder(5, 10);
-            Console.WriteLine($"Func result: {result}");
+            Console.WriteLine($"Func result: {result}"); // Output: Func result: 15
 
             // 3. Predicate (Returns Bool)
             // Lambda: takes x, returns true if even.
             Predicate<int> isEven = (x) => x % 2 == 0;
-            Console.WriteLine($"Predicate (Is 4 even?): {isEven(4)}");
-            Console.WriteLine($"Predicate (Is 5 even?): {isEven(5)}");
+            Console.WriteLine($"Predicate (Is 4 even?): {isEven(4)}"); // Output: Predicate (Is 4 even?): True
+            Console.WriteLine($"Predicate (Is 5 even?): {isEven(5)}"); // Output: Predicate (Is 5 even?): False
 
             // Real world usage: List.Find uses Predicate
             var numbers = new System.Collections.Generic.List<int> { 1, 3, 5, 8, 9 };
             int firstEven = numbers.Find(isEven);
-            Console.WriteLine($"First even number in list: {firstEven}");
+            Console.WriteLine($"First even number in list: {firstEven}"); // Output: First even number in list: 8
         }
     }
 }

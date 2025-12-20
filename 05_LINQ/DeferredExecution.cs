@@ -29,47 +29,47 @@ namespace Concepts.LINQ
         // To run this file: dotnet run --property:StartupObject=Concepts.LINQ.DeferredExecution
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- Deferred vs Immediate Execution ---");
+            Console.WriteLine("--- Deferred vs Immediate Execution ---"); // Output: --- Deferred vs Immediate Execution ---
 
             List<int> numbers = new List<int> { 1, 2, 3 };
 
             // 1. Deferred Execution
-            Console.WriteLine("\n1. Deferred Execution:");
+            Console.WriteLine("\n1. Deferred Execution:"); // Output: \n1. Deferred Execution:
             // We define the query. NO LOOP runs here.
             var query = numbers.Where(n => 
             {
-                Console.WriteLine($"  Checking {n}..."); // Proof of when it runs
+                Console.WriteLine($"  Checking {n}..."); // Proof of when it runs // Output:   Checking 1...
                 return n > 1;
             });
 
-            Console.WriteLine("  (Query defined. Nothing happened yet.)");
+            Console.WriteLine("  (Query defined. Nothing happened yet.)"); // Output:   (Query defined. Nothing happened yet.)
             
             numbers.Add(4); // We modify the source AFTER defining the query
-            Console.WriteLine("  (Added 4 to list.)");
+            Console.WriteLine("  (Added 4 to list.)"); // Output:   (Added 4 to list.)
 
-            Console.WriteLine("  Running foreach loop now:");
+            Console.WriteLine("  Running foreach loop now:"); // Output:   Running foreach loop now:
             // The query executes NOW, iterating over the CURRENT state of the list (1, 2, 3, 4)
             foreach (var n in query)
             {
-                Console.WriteLine($"  Result: {n}");
+                Console.WriteLine($"  Result: {n}"); // Output:   Result: 2
             }
 
             // 2. Immediate Execution
-            Console.WriteLine("\n2. Immediate Execution:");
+            Console.WriteLine("\n2. Immediate Execution:"); // Output: \n2. Immediate Execution:
             List<int> numbers2 = new List<int> { 1, 2, 3 };
             
             // .ToList() forces execution immediately.
             var resultList = numbers2.Where(n => n > 1).ToList();
-            Console.WriteLine("  (List created immediately.)");
+            Console.WriteLine("  (List created immediately.)"); // Output:   (List created immediately.)
 
             numbers2.Add(4); // Modify source
-            Console.WriteLine("  (Added 4 to source list.)");
+            Console.WriteLine("  (Added 4 to source list.)"); // Output:   (Added 4 to source list.)
 
-            Console.WriteLine("  Printing result list:");
+            Console.WriteLine("  Printing result list:"); // Output:   Printing result list:
             // The resultList does NOT contain 4, because it was baked before we added it.
             foreach (var n in resultList)
             {
-                Console.WriteLine($"  Result: {n}");
+                Console.WriteLine($"  Result: {n}"); // Output:   Result: 2
             }
         }
     }

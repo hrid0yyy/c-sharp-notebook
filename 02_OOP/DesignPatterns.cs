@@ -31,7 +31,7 @@ namespace Concepts
     class President
     {
         private static President? _instance;
-        private President() { Console.WriteLine("President Elected!"); } // Private Constructor
+        private President() { Console.WriteLine("President Elected!"); } // Private Constructor // Output: President Elected!
 
         public static President Instance
         {
@@ -42,13 +42,13 @@ namespace Concepts
                 return _instance;
             }
         }
-        public void Announce() { Console.WriteLine("I am the President."); }
+        public void Announce() { Console.WriteLine("I am the President."); } // Output: I am the President.
     }
 
     // 2. Factory
     abstract class Pizza { public abstract void Eat(); }
-    class CheesePizza : Pizza { public override void Eat() { Console.WriteLine("Eating Cheese Pizza"); } }
-    class PepperoniPizza : Pizza { public override void Eat() { Console.WriteLine("Eating Pepperoni Pizza"); } }
+    class CheesePizza : Pizza { public override void Eat() { Console.WriteLine("Eating Cheese Pizza"); } } // Output: Eating Cheese Pizza
+    class PepperoniPizza : Pizza { public override void Eat() { Console.WriteLine("Eating Pepperoni Pizza"); } } // Output: Eating Pepperoni Pizza
 
     class PizzaFactory
     {
@@ -65,16 +65,16 @@ namespace Concepts
         // To run this file: dotnet run --property:StartupObject=Concepts.DesignPatterns
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- Design Patterns Demo ---");
+            Console.WriteLine("--- Design Patterns Demo ---"); // Output: --- Design Patterns Demo ---
 
             // Singleton
-            Console.WriteLine("\n1. Singleton:");
+            Console.WriteLine("\n1. Singleton:"); // Output: \n1. Singleton:
             President p1 = President.Instance;
             President p2 = President.Instance; // Same instance! Constructor not called again.
             p1.Announce();
 
             // Factory
-            Console.WriteLine("\n2. Factory:");
+            Console.WriteLine("\n2. Factory:"); // Output: \n2. Factory:
             Pizza? myPizza = PizzaFactory.CreatePizza("Cheese");
             if (myPizza != null)
             {
@@ -82,7 +82,7 @@ namespace Concepts
             }
             else
             {
-                Console.WriteLine("Factory returned no pizza!");
+                Console.WriteLine("Factory returned no pizza!"); // Output: Factory returned no pizza!
             }
         }
     }

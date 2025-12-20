@@ -39,7 +39,7 @@ namespace Concepts
         // No access modifiers (public/private), no parameters.
         static Configuration()
         {
-            Console.WriteLine("Static Constructor: Setting up the Blueprint Office...");
+            Console.WriteLine("Static Constructor: Setting up the Blueprint Office..."); // Output: Static Constructor: Setting up the Blueprint Office...
             AppName = "My Awesome App";
             StartTime = DateTime.Now;
         }
@@ -47,7 +47,7 @@ namespace Concepts
         // Instance Constructor
         public Configuration()
         {
-            Console.WriteLine("Instance Constructor: Building a new object...");
+            Console.WriteLine("Instance Constructor: Building a new object..."); // Output: Instance Constructor: Building a new object...
         }
     }
 
@@ -56,17 +56,17 @@ namespace Concepts
         // To run this file: dotnet run --property:StartupObject=Concepts.StaticConstructors
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- Static Constructors Demo ---");
+            Console.WriteLine("--- Static Constructors Demo ---"); // Output: --- Static Constructors Demo ---
 
-            Console.WriteLine("1. Accessing a static property...");
+            Console.WriteLine("1. Accessing a static property..."); // Output: 1. Accessing a static property...
             // This triggers the Static Constructor immediately.
-            Console.WriteLine($"App Name: {Configuration.AppName}");
+            Console.WriteLine($"App Name: {Configuration.AppName}"); // Output: App Name: My Awesome App
 
-            Console.WriteLine("\n2. Creating the first instance...");
+            Console.WriteLine("\n2. Creating the first instance..."); // Output: \n2. Creating the first instance...
             // Static constructor is NOT called again. Only Instance constructor runs.
             Configuration c1 = new Configuration();
 
-            Console.WriteLine("\n3. Creating the second instance...");
+            Console.WriteLine("\n3. Creating the second instance..."); // Output: \n3. Creating the second instance...
             // Only Instance constructor runs.
             Configuration c2 = new Configuration();
         }

@@ -35,24 +35,24 @@ namespace Concepts.CoreFundamentals
             int a = 10;
             int b = a; // Copy the value
             b = 20;    // Change the copy
-            Console.WriteLine($"  Original 'a': {a} (Unchanged)");
-            Console.WriteLine($"  Copy 'b': {b}");
+            Console.WriteLine($"  Original 'a': {a} (Unchanged)"); // Output: Original 'a': 10 (Unchanged)
+            Console.WriteLine($"  Copy 'b': {b}");                 // Output: Copy 'b': 20
 
             // 2. Reference Types
             Console.WriteLine("\n2. Reference Types (The Shared Link):");
             PersonRef p1 = new PersonRef { Name = "Alice" };
             PersonRef p2 = p1; // Copy the reference (link)
             p2.Name = "Bob"; // Change the object via the second link
-            Console.WriteLine($"  Original 'p1.Name': {p1.Name} (Changed!)");
-            Console.WriteLine($"  Copy 'p2.Name': {p2.Name}");
+            Console.WriteLine($"  Original 'p1.Name': {p1.Name} (Changed!)"); // Output: Original 'p1.Name': Bob (Changed!)
+            Console.WriteLine($"  Copy 'p2.Name': {p2.Name}");                 // Output: Copy 'p2.Name': Bob
 
             // 3. Strings (Special Reference Type)
             Console.WriteLine("\n3. Strings (Immutable Reference):");
             string s1 = "Hello";
             string s2 = s1;
             s2 = "World"; // Creates a NEW string, doesn't change the old one
-            Console.WriteLine($"  Original 's1': {s1}");
-            Console.WriteLine($"  Copy 's2': {s2}");
+            Console.WriteLine($"  Original 's1': {s1}"); // Output: Original 's1': Hello
+            Console.WriteLine($"  Copy 's2': {s2}");     // Output: Copy 's2': World
         }
     }
 

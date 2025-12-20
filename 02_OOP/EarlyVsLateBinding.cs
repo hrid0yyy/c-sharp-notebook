@@ -36,7 +36,7 @@ namespace Concepts
     {
         public void Speak()
         {
-            Console.WriteLine("Actor: To be or not to be...");
+            Console.WriteLine("Actor: To be or not to be..."); // Output: Actor: To be or not to be...
         }
     }
 
@@ -45,15 +45,15 @@ namespace Concepts
         // To run this file: dotnet run --property:StartupObject=Concepts.EarlyVsLateBinding
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- Early vs Late Binding Demo ---");
+            Console.WriteLine("--- Early vs Late Binding Demo ---"); // Output: --- Early vs Late Binding Demo ---
 
             // 1. Early Binding
-            Console.WriteLine("\n1. Early Binding (Compile Time):");
+            Console.WriteLine("\n1. Early Binding (Compile Time):"); // Output: \n1. Early Binding (Compile Time):
             Actor actor = new Actor();
             actor.Speak(); // Compiler knows 'Speak' exists.
 
             // 2. Late Binding (Using Reflection)
-            Console.WriteLine("\n2. Late Binding (Reflection):");
+            Console.WriteLine("\n2. Late Binding (Reflection):"); // Output: \n2. Late Binding (Reflection):
             Assembly assembly = Assembly.GetExecutingAssembly();
             Type? type = assembly.GetType("Concepts.Actor");
             
@@ -69,19 +69,19 @@ namespace Concepts
             }
 
             // 3. Late Binding (Using dynamic)
-            Console.WriteLine("\n3. Late Binding (dynamic keyword):");
+            Console.WriteLine("\n3. Late Binding (dynamic keyword):"); // Output: \n3. Late Binding (dynamic keyword):
             dynamic dynamicActor = new Actor();
             dynamicActor.Speak(); // Compiler doesn't check this. Runtime checks it.
 
             try
             {
-                Console.WriteLine("Trying to call a method that doesn't exist...");
+                Console.WriteLine("Trying to call a method that doesn't exist..."); // Output: Trying to call a method that doesn't exist...
                 dynamicActor.Dance(); // No error at compile time! Crash at runtime.
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException e)
             {
-                Console.WriteLine($"Error: {e.Message}");
-                Console.WriteLine("Story: The audience asked for a dance, but the actor doesn't know how!");
+                Console.WriteLine($"Error: {e.Message}"); // Output: Error: 'Concepts.Actor' does not contain a definition for 'Dance'
+                Console.WriteLine("Story: The audience asked for a dance, but the actor doesn't know how!"); // Output: Story: The audience asked for a dance, but the actor doesn't know how!
             }
         }
     }

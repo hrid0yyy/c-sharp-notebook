@@ -50,7 +50,7 @@ namespace Concepts.CollectionsAndGenerics
         public void Add(T item)
         {
             _items.Add(item);
-            Console.WriteLine($"[Repository<{typeof(T).Name}>] Added item: {item}");
+            Console.WriteLine($"[Repository<{typeof(T).Name}>] Added item: {item}"); // Output: [Repository<String>] Added item: Hello World
         }
 
         public T? Get(int id)
@@ -80,10 +80,10 @@ namespace Concepts.CollectionsAndGenerics
         // To run this file: dotnet run --property:StartupObject=Concepts.Generics.GenericsDemo
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- Comprehensive Generics Demo ---");
+            Console.WriteLine("--- Comprehensive Generics Demo ---"); // Output: --- Comprehensive Generics Demo ---
 
             // --- Demo: Generic Class & Interface ---
-            Console.WriteLine("\n1. Generic Class & Interface:");
+            Console.WriteLine("\n1. Generic Class & Interface:"); // Output: \n1. Generic Class & Interface:
             
             // Create a repository for Strings
             IRepository<string> stringRepo = new Repository<string>();
@@ -94,28 +94,28 @@ namespace Concepts.CollectionsAndGenerics
             intRepo.Add(42);
 
             // --- Demo: Generic Method ---
-            Console.WriteLine("\n2. Generic Method:");
+            Console.WriteLine("\n2. Generic Method:"); // Output: \n2. Generic Method:
             int a = 10, b = 20;
-            Console.WriteLine($"Before Swap: a={a}, b={b}");
+            Console.WriteLine($"Before Swap: a={a}, b={b}"); // Output: Before Swap: a=10, b=20
             Swap<int>(ref a, ref b);
-            Console.WriteLine($"After Swap:  a={a}, b={b}");
+            Console.WriteLine($"After Swap:  a={a}, b={b}"); // Output: After Swap:  a=20, b=10
 
             // --- Demo: Generic Delegate ---
-            Console.WriteLine("\n3. Generic Delegate:");
+            Console.WriteLine("\n3. Generic Delegate:"); // Output: \n3. Generic Delegate:
             
             // Define what the printer does for strings
-            Printer<string> stringPrinter = (s) => Console.WriteLine($"Printing String: {s.ToUpper()}");
+            Printer<string> stringPrinter = (s) => Console.WriteLine($"Printing String: {s.ToUpper()}"); // Output: Printing String: GENERICS ARE COOL
             
             // Define what the printer does for integers
-            Printer<int> intPrinter = (i) => Console.WriteLine($"Printing Int: {i * 2}");
+            Printer<int> intPrinter = (i) => Console.WriteLine($"Printing Int: {i * 2}"); // Output: Printing Int: 100
 
             stringPrinter("generics are cool");
             intPrinter(50);
 
             // Using built-in Generic Delegates (Action, Func)
-            Console.WriteLine("\n4. Built-in Generic Delegates (Func/Action):");
+            Console.WriteLine("\n4. Built-in Generic Delegates (Func/Action):"); // Output: \n4. Built-in Generic Delegates (Func/Action):
             Func<int, int, int> add = (x, y) => x + y;
-            Console.WriteLine($"Func Add(5, 10): {add(5, 10)}");
+            Console.WriteLine($"Func Add(5, 10): {add(5, 10)}"); // Output: Func Add(5, 10): 15
         }
     }
 }

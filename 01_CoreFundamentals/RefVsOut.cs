@@ -42,12 +42,12 @@ namespace Concepts
 
             // 1. REF Example
             int myPizzaSlices = 2;
-            Console.WriteLine($"Before Ref: I have {myPizzaSlices} slices.");
+            Console.WriteLine($"Before Ref: I have {myPizzaSlices} slices."); // Output: Before Ref: I have 2 slices.
             
             // Must be initialized!
             EatPizza(ref myPizzaSlices);
             
-            Console.WriteLine($"After Ref: I have {myPizzaSlices} slices.");
+            Console.WriteLine($"After Ref: I have {myPizzaSlices} slices."); // Output: After Ref: I have 1 slices.
 
             // 2. OUT Example
             int newPizza; // Not initialized!
@@ -56,20 +56,20 @@ namespace Concepts
             Console.WriteLine("\nSending friend with an empty box (Out)...");
             GetNewPizza(out newPizza);
 
-            Console.WriteLine($"After Out: I have {newPizza} slices.");
+            Console.WriteLine($"After Out: I have {newPizza} slices."); // Output: After Out: I have 8 slices.
         }
 
         // REF: Can read and write. Must be initialized by caller.
         static void EatPizza(ref int slices)
         {
-            Console.WriteLine("  (Friend is eating one slice...)");
+            Console.WriteLine("  (Friend is eating one slice...)"); // Output:   (Friend is eating one slice...)
             slices = slices - 1;
         }
 
         // OUT: Must write. Initial value is ignored.
         static void GetNewPizza(out int slices)
         {
-            Console.WriteLine("  (Friend bought a new pizza!)");
+            Console.WriteLine("  (Friend bought a new pizza!)"); // Output:   (Friend bought a new pizza!)
             slices = 8; // MUST assign a value.
         }
     }

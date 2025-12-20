@@ -43,7 +43,7 @@ namespace Concepts
         // To run this file: dotnet run --property:StartupObject=Concepts.LambdaExpressions
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- Lambda Expressions Demo ---");
+            Console.WriteLine("--- Lambda Expressions Demo ---"); // Output: --- Lambda Expressions Demo ---
 
             // 1. Basic Example: Squaring a number
             // Old way (using a delegate and a named method - not shown here for brevity)
@@ -51,7 +51,7 @@ namespace Concepts
             // New way (Lambda):
             // Input 'x' goes to 'x * x'
             Func<int, int> square = x => x * x;
-            Console.WriteLine($"Square of 5 is: {square(5)}"); // Output: 25
+            Console.WriteLine($"Square of 5 is: {square(5)}"); // Output: Square of 5 is: 25
 
             // 2. Using Lambda with Lists (LINQ)
             List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -60,22 +60,22 @@ namespace Concepts
             // Lambda: n => n % 2 == 0
             List<int> evenNumbers = numbers.Where(n => n % 2 == 0).ToList();
 
-            Console.WriteLine("Even Numbers:");
-            evenNumbers.ForEach(n => Console.Write(n + " ")); // Another lambda!
+            Console.WriteLine("Even Numbers:"); // Output: Even Numbers:
+            evenNumbers.ForEach(n => Console.Write(n + " ")); // Another lambda! // Output: 2 4 6 8 10 
             Console.WriteLine();
 
             // 3. Lambda with multiple parameters
             // Story: "Add these two numbers."
             // (a, b) => a + b
             Func<int, int, int> add = (a, b) => a + b;
-            Console.WriteLine($"Sum of 10 and 20 is: {add(10, 20)}");
+            Console.WriteLine($"Sum of 10 and 20 is: {add(10, 20)}"); // Output: Sum of 10 and 20 is: 30
 
             // 4. Lambda with a statement block (curly braces)
             // Used when you need multiple lines of code.
             Action<string> greet = name => 
             {
                 string greeting = $"Hello, {name}!";
-                Console.WriteLine(greeting);
+                Console.WriteLine(greeting); // Output: Hello, Developer!
             };
 
             greet("Developer");

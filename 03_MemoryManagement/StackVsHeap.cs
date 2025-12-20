@@ -31,14 +31,14 @@ namespace Concepts.MemoryManagement
         // To run this file: dotnet run --property:StartupObject=Concepts.MemoryManagement.StackVsHeap
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- Stack vs Heap Demo ---");
+            Console.WriteLine("--- Stack vs Heap Demo ---"); // Output: --- Stack vs Heap Demo ---
 
             // 1. Stack Allocation
             // 'x' and 'y' are integers. They live on the Stack.
             // Allocation is instant. Deallocation happens when Main() finishes.
             int x = 10; 
             int y = 20;
-            Console.WriteLine($"Stack: x={x}, y={y}");
+            Console.WriteLine($"Stack: x={x}, y={y}"); // Output: Stack: x=10, y=20
 
             // 2. Heap Allocation
             // 'p' is a reference (pointer). It lives on the Stack.
@@ -46,7 +46,7 @@ namespace Concepts.MemoryManagement
             // 'p' points to the memory address on the Heap.
             PersonHeap p = new PersonHeap(); 
             p.Age = 30;
-            Console.WriteLine($"Heap: Person object created at address pointed to by 'p'. Age={p.Age}");
+            Console.WriteLine($"Heap: Person object created at address pointed to by 'p'. Age={p.Age}"); // Output: Heap: Person object created at address pointed to by 'p'. Age=30
 
             // 3. Scope
             DoWork();
@@ -56,14 +56,14 @@ namespace Concepts.MemoryManagement
             // - The 'Person' object created inside DoWork is now an "Orphan" on the Heap.
             // - The Garbage Collector will eventually delete it.
             
-            Console.WriteLine("Back in Main. The object from DoWork is now garbage.");
+            Console.WriteLine("Back in Main. The object from DoWork is now garbage."); // Output: Back in Main. The object from DoWork is now garbage.
         }
 
         static void DoWork()
         {
             int temp = 5; // Stack
             PersonHeap orphan = new PersonHeap(); // Heap
-            Console.WriteLine($"Inside DoWork: temp={temp}");
+            Console.WriteLine($"Inside DoWork: temp={temp}"); // Output: Inside DoWork: temp=5
         }
     }
 

@@ -44,23 +44,23 @@ namespace Concepts.AsyncAndParallel
         // To run this file: dotnet run --property:StartupObject=Concepts.AsyncMultithreading
         public static async Task Main(string[] args)
         {
-            Console.WriteLine("--- Async and Multithreading Demo ---");
+            Console.WriteLine("--- Async and Multithreading Demo ---"); // Output: --- Async and Multithreading Demo ---
 
             // 1. Async/Await Demo
-            Console.WriteLine("\n1. Starting Breakfast (Async)...");
+            Console.WriteLine("\n1. Starting Breakfast (Async)..."); // Output: \n1. Starting Breakfast (Async)...
             Task<string> toastTask = ToastBreadAsync();
             Task<string> eggTask = FryEggsAsync();
 
-            Console.WriteLine("Chef is pouring coffee while food cooks...");
+            Console.WriteLine("Chef is pouring coffee while food cooks..."); // Output: Chef is pouring coffee while food cooks...
             
             // Wait for both to finish
             string toast = await toastTask;
             string eggs = await eggTask;
 
-            Console.WriteLine($"Breakfast is ready: {toast} and {eggs}");
+            Console.WriteLine($"Breakfast is ready: {toast} and {eggs}"); // Output: Breakfast is ready: Buttered Toast and Fried Eggs
 
             // 2. Multithreading & Locking Demo
-            Console.WriteLine("\n2. Multithreading & Locking (The Salt Shaker)...");
+            Console.WriteLine("\n2. Multithreading & Locking (The Salt Shaker)..."); // Output: \n2. Multithreading & Locking (The Salt Shaker)...
             Thread t1 = new Thread(UseSalt);
             Thread t2 = new Thread(UseSalt);
             
@@ -73,17 +73,17 @@ namespace Concepts.AsyncAndParallel
 
         static async Task<string> ToastBreadAsync()
         {
-            Console.WriteLine("  -> Bread in toaster...");
+            Console.WriteLine("  -> Bread in toaster..."); // Output:   -> Bread in toaster...
             await Task.Delay(2000); // Simulate 2 seconds work without blocking
-            Console.WriteLine("  -> Toast popped!");
+            Console.WriteLine("  -> Toast popped!"); // Output:   -> Toast popped!
             return "Buttered Toast";
         }
 
         static async Task<string> FryEggsAsync()
         {
-            Console.WriteLine("  -> Eggs in pan...");
+            Console.WriteLine("  -> Eggs in pan..."); // Output:   -> Eggs in pan...
             await Task.Delay(2000);
-            Console.WriteLine("  -> Eggs cooked!");
+            Console.WriteLine("  -> Eggs cooked!"); // Output:   -> Eggs cooked!
             return "Fried Eggs";
         }
 
@@ -94,9 +94,9 @@ namespace Concepts.AsyncAndParallel
             // Without lock, output might be mixed up
             lock (saltLock)
             {
-                Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} grabbed the salt.");
+                Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} grabbed the salt."); // Output: Thread [ID] grabbed the salt.
                 Thread.Sleep(500); // Using salt
-                Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} put back the salt.");
+                Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} put back the salt."); // Output: Thread [ID] put back the salt.
             }
         }
     }

@@ -57,33 +57,33 @@ namespace Concepts.CoreFundamentals
             Console.WriteLine("\n1. Type Pattern:");
             if (s1 is Circle c) // Checks type AND assigns to variable 'c' in one step
             {
-                Console.WriteLine($"It's a circle with radius {c.Radius}");
+                Console.WriteLine($"It's a circle with radius {c.Radius}"); // Output: It's a circle with radius 5
             }
 
             // 2. Switch Expressions (The concise switch)
             Console.WriteLine("\n2. Switch Expressions:");
-            Console.WriteLine($"Shape 1 Area: {CalculateArea(s1)}");
-            Console.WriteLine($"Shape 2 Area: {CalculateArea(s2)}");
-            Console.WriteLine($"Shape 4 Area: {CalculateArea(s4)}");
+            Console.WriteLine($"Shape 1 Area: {CalculateArea(s1)}"); // Output: Shape 1 Area: 78.53981633974483
+            Console.WriteLine($"Shape 2 Area: {CalculateArea(s2)}"); // Output: Shape 2 Area: 100
+            Console.WriteLine($"Shape 4 Area: {CalculateArea(s4)}"); // Output: Shape 4 Area: 12
 
             // 3. Property Patterns & Relational Patterns
             Console.WriteLine("\n3. Property & Relational Patterns:");
-            Console.WriteLine(DescribeShape(s2)); // Square
-            Console.WriteLine(DescribeShape(s3)); // Rectangle
-            Console.WriteLine(DescribeShape(s1)); // Circle
+            Console.WriteLine(DescribeShape(s2)); // Output: Square
+            Console.WriteLine(DescribeShape(s3)); // Output: Rectangle
+            Console.WriteLine(DescribeShape(s1)); // Output: Circle
 
             // 4. Logical Patterns (and, or, not)
             Console.WriteLine("\n4. Logical Patterns:");
             int temperature = 25;
             if (temperature is >= 20 and <= 30)
             {
-                Console.WriteLine("The temperature is comfortable.");
+                Console.WriteLine("The temperature is comfortable."); // Output: The temperature is comfortable.
             }
             
             // 5. Null checking with patterns
             if (nullShape is not Circle)
             {
-                 Console.WriteLine("nullShape is definitely not a Circle (it is null).");
+                 Console.WriteLine("nullShape is definitely not a Circle (it is null)."); // Output: nullShape is definitely not a Circle (it is null).
             }
         }
 

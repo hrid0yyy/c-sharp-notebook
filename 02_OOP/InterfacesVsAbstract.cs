@@ -42,7 +42,7 @@ namespace Concepts.OOP
         // Shared code (Concrete method)
         public void Sleep()
         {
-            Console.WriteLine($"{Name} is sleeping.");
+            Console.WriteLine($"{Name} is sleeping."); // Output: Donald is sleeping.
         }
 
         // Abstract method (Must be implemented by child)
@@ -54,17 +54,17 @@ namespace Concepts.OOP
     {
         public override void MakeSound()
         {
-            Console.WriteLine("Quack!");
+            Console.WriteLine("Quack!"); // Output: Quack!
         }
 
         public void Fly()
         {
-            Console.WriteLine("Duck is flying.");
+            Console.WriteLine("Duck is flying."); // Output: Duck is flying.
         }
 
         public void Swim()
         {
-            Console.WriteLine("Duck is swimming.");
+            Console.WriteLine("Duck is swimming."); // Output: Duck is swimming.
         }
     }
 
@@ -73,7 +73,7 @@ namespace Concepts.OOP
         // To run this file: dotnet run --property:StartupObject=Concepts.OOP.InterfacesVsAbstract
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- Interfaces vs Abstract Classes ---");
+            Console.WriteLine("--- Interfaces vs Abstract Classes ---"); // Output: --- Interfaces vs Abstract Classes ---
 
             Duck d = new Duck { Name = "Donald" };
             

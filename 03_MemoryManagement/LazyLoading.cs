@@ -35,14 +35,14 @@ namespace Concepts
     {
         public ExpensiveResource()
         {
-            Console.WriteLine("ExpensiveResource: Initializing... (This takes time and memory)");
+            Console.WriteLine("ExpensiveResource: Initializing... (This takes time and memory)"); // Output: ExpensiveResource: Initializing... (This takes time and memory)
             Thread.Sleep(1000); // Simulate heavy work
-            Console.WriteLine("ExpensiveResource: Created!");
+            Console.WriteLine("ExpensiveResource: Created!"); // Output: ExpensiveResource: Created!
         }
 
         public void DoWork()
         {
-            Console.WriteLine("ExpensiveResource: Working...");
+            Console.WriteLine("ExpensiveResource: Working..."); // Output: ExpensiveResource: Working...
         }
     }
 
@@ -51,28 +51,28 @@ namespace Concepts
         // To run this file: dotnet run --property:StartupObject=Concepts.LazyLoading
         public static void Main(string[] args)
         {
-            Console.WriteLine("--- Lazy Loading Demo ---");
+            Console.WriteLine("--- Lazy Loading Demo ---"); // Output: --- Lazy Loading Demo ---
 
             // 1. Define the lazy object. 
             // We pass a lambda expression that defines HOW to create it, but it's NOT created yet.
             Lazy<ExpensiveResource> lazyResource = new Lazy<ExpensiveResource>(() => new ExpensiveResource());
 
-            Console.WriteLine("Application Started. The heavy object is NOT created yet.");
-            Console.WriteLine($"Is value created? {lazyResource.IsValueCreated}"); // False
+            Console.WriteLine("Application Started. The heavy object is NOT created yet."); // Output: Application Started. The heavy object is NOT created yet.
+            Console.WriteLine($"Is value created? {lazyResource.IsValueCreated}"); // Output: Is value created? False
 
-            Console.WriteLine("Press Enter to access the resource...");
+            Console.WriteLine("Press Enter to access the resource..."); // Output: Press Enter to access the resource...
             // Console.ReadLine(); // Uncomment to pause
 
             // 2. The resource is accessed here for the first time.
             // This triggers the constructor of ExpensiveResource.
-            Console.WriteLine("Accessing resource for the first time...");
+            Console.WriteLine("Accessing resource for the first time..."); // Output: Accessing resource for the first time...
             ExpensiveResource instance = lazyResource.Value; 
             instance.DoWork();
 
-            Console.WriteLine($"Is value created? {lazyResource.IsValueCreated}"); // True
+            Console.WriteLine($"Is value created? {lazyResource.IsValueCreated}"); // Output: Is value created? True
             
             // 3. Accessing it again uses the cached instance (Constructor not called again).
-            Console.WriteLine("Accessing resource for the second time...");
+            Console.WriteLine("Accessing resource for the second time..."); // Output: Accessing resource for the second time...
             ExpensiveResource instance2 = lazyResource.Value;
             instance2.DoWork();
         }

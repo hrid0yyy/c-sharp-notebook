@@ -72,7 +72,7 @@ namespace Concepts.CoreFundamentals
             string formattedName = newName.Trim();
             
             _userName = formattedName;
-            Console.WriteLine($"User updated: {_userName}, Age: {newAge}");
+            Console.WriteLine($"User updated: {_userName}, Age: {newAge}"); // Output: User updated: Alice, Age: 30
         }
 
         // Rule: Use PascalCase for Events

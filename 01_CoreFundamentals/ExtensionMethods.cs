@@ -63,11 +63,11 @@ namespace Concepts.CoreFundamentals
             // Even though 'WordCount' is not defined inside the String class, we call it like it is.
             int count = message.WordCount(); 
             
-            Console.WriteLine($"Original: {message}");
-            Console.WriteLine($"Word Count: {count}");
+            Console.WriteLine($"Original: {message}"); // Output: Original: Hello world. This is C#.
+            Console.WriteLine($"Word Count: {count}"); // Output: Word Count: 5
 
             // Another one
-            Console.WriteLine(message.ToPirateSpeak());
+            Console.WriteLine(message.ToPirateSpeak()); // Output: Yarr! Hello world. This is C#. Ahoy!
 
             // Without extension methods, we would have to do this (Ugly):
             // int count2 = StringExtensions.WordCount(message);
