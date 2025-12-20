@@ -30,6 +30,9 @@ The concepts are organized into the following categories:
 *   **`ExtensionMethods.cs`**: Adding methods to existing types (The Backpack Attachment).
 *   **`ExceptionHandling.cs`**: Try-Catch-Finally (The Trapeze Artist).
 *   **`NullableTypes.cs`**: Handling nulls safely (The Mystery Box).
+*   **`PatternMatching.cs`**: `is` checks, switch expressions, and property patterns (The Smart Security Guard).
+*   **`TuplesAndDeconstruction.cs`**: Returning multiple values, deconstruction, and discards (The Combo Meal).
+*   **`AnonymousTypes.cs`**: Temporary objects for local scope (The Temporary ID Badge).
 
 ### ⚙️ Generics
 *   **`Generics.cs`**: Generic Classes, Methods, Interfaces, and Delegates (The Universal Factory).
