@@ -34,6 +34,10 @@ The concepts are organized into the following categories:
 *   **`TuplesAndDeconstruction.cs`**: Returning multiple values, deconstruction, and discards (The Combo Meal).
 *   **`AnonymousTypes.cs`**: Temporary objects for local scope (The Temporary ID Badge).
 
+### 📏 Coding Style
+*   **`NamingConventions.cs`**: PascalCase, camelCase, and standard .NET naming rules.
+*   **`CodingConventions.cs`**: Best practices for `var`, `using`, string interpolation, and more.
+
 ### ⚙️ Generics
 *   **`Generics.cs`**: Generic Classes, Methods, Interfaces, and Delegates (The Universal Factory).
 
