@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Concepts.Generics
+namespace Concepts.CollectionsAndGenerics
 {
     // ==========================================
     // Topic: Generics (Classes, Methods, Interfaces, Delegates)

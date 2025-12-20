@@ -1,6 +1,6 @@
 using System;
 
-namespace Concepts.AdvancedConcepts
+namespace Concepts.CoreFundamentals
 {
     // ==========================================
     // Topic: Exception Handling (Try, Catch, Finally, Throw)

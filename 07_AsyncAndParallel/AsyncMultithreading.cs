@@ -2,7 +2,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Concepts
+namespace Concepts.AsyncAndParallel
 {
     // ==========================================
     // Topic: Async/Await and Multithreading

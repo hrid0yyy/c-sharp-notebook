@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Concepts.CodingStyle
+namespace Concepts.CoreFundamentals
 {
     // ==========================================
     // Topic: C# Coding Conventions, For more: https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions

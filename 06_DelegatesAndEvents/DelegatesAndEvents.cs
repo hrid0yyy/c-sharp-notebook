@@ -1,6 +1,6 @@
 using System;
 
-namespace Concepts
+namespace Concepts.DelegatesAndEvents
 {
     // ==========================================
     // Topic: Delegates and Events
@@ -66,9 +66,9 @@ namespace Concepts
         }
     }
 
-    class DelegatesAndEvents
+    class DelegatesDemo
     {
-        // To run this file: dotnet run --property:StartupObject=Concepts.DelegatesAndEvents
+        // To run this file: dotnet run --property:StartupObject=Concepts.DelegatesAndEvents.DelegatesDemo
         public static void Main(string[] args)
         {
             Console.WriteLine("--- Delegates and Events Demo ---");

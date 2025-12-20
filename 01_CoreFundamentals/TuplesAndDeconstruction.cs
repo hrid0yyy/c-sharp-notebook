@@ -1,6 +1,6 @@
 using System;
 
-namespace Concepts.AdvancedConcepts
+namespace Concepts.CoreFundamentals
 {
     // ==========================================
     // Topic: Tuples, Deconstruction, and Discards
@@ -59,8 +59,8 @@ namespace Concepts.AdvancedConcepts
 
             // 4. Deconstructing Objects
             Console.WriteLine("\n4. Deconstructing Objects:");
-            var p = new Person("John", "Doe", 30);
-            // The Person class has a Deconstruct method, so we can treat it like a tuple!
+            var p = new PersonDeconstruct("John", "Doe", 30);
+            // The PersonDeconstruct class has a Deconstruct method, so we can treat it like a tuple!
             var (first, last, age) = p; 
             Console.WriteLine($"{first} {last} is {age} years old.");
 
@@ -97,13 +97,13 @@ namespace Concepts.AdvancedConcepts
     }
 
     // Class with Deconstruct support
-    class Person
+    class PersonDeconstruct
     {
         public string FirstName { get; }
         public string LastName { get; }
         public int Age { get; }
 
-        public Person(string first, string last, int age)
+        public PersonDeconstruct(string first, string last, int age)
         {
             FirstName = first;
             LastName = last;

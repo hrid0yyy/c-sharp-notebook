@@ -1,6 +1,6 @@
 using System;
 
-namespace Concepts.CodingStyle
+namespace Concepts.CoreFundamentals
 {
     // ==========================================
     // Topic: C# Naming Conventions , For More: https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names

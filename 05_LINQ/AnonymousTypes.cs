@@ -1,6 +1,6 @@
 using System;
 
-namespace Concepts.AdvancedConcepts
+namespace Concepts.LINQ
 {
     // ==========================================
     // Topic: Anonymous Types

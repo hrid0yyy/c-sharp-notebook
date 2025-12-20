@@ -1,6 +1,6 @@
 using System;
 
-namespace Concepts.OOP
+namespace Concepts.MemoryManagement
 {
     // ==========================================
     // Topic: Records (C# 9.0+)
@@ -35,7 +35,7 @@ namespace Concepts.OOP
 
     // 1. Defining a Record (One line!)
     // This creates a class with properties Name and Age, a constructor, and deconstructor.
-    public record Person(string Name, int Age);
+    public record PersonRecord(string Name, int Age);
 
     // 2. Defining a Class (The old way, for comparison)
     public class PersonClass
@@ -58,8 +58,8 @@ namespace Concepts.OOP
             Console.WriteLine("--- Records Demo ---");
 
             // 1. Creation
-            var r1 = new Person("Alice", 25);
-            var r2 = new Person("Alice", 25);
+            var r1 = new PersonRecord("Alice", 25);
+            var r2 = new PersonRecord("Alice", 25);
             
             var c1 = new PersonClass("Alice", 25);
             var c2 = new PersonClass("Alice", 25);
@@ -76,8 +76,8 @@ namespace Concepts.OOP
             // Create a copy of r1, but change Age to 26.
             var r3 = r1 with { Age = 26 };
             
-            Console.WriteLine($"Original: {r1}"); // Built-in ToString()! Output: Person { Name = Alice, Age = 25 }
-            Console.WriteLine($"New Copy: {r3}"); // Output: Person { Name = Alice, Age = 26 }
+            Console.WriteLine($"Original: {r1}"); // Built-in ToString()! Output: PersonRecord { Name = Alice, Age = 25 }
+            Console.WriteLine($"New Copy: {r3}"); // Output: PersonRecord { Name = Alice, Age = 26 }
 
             // 4. Deconstruction
             Console.WriteLine("\n3. Deconstruction:");
